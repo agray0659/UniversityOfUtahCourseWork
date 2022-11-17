@@ -42,7 +42,19 @@ vec3 Shade( Material mtl, vec3 position, vec3 normal, vec3 view )
 	for ( int i=0; i<NUM_LIGHTS; ++i ) {
 		// TO-DO: Check for shadows
 		// TO-DO: If not shadowed, perform shading using the Blinn model
-		color += mtl.k_d * lights[i].intensity;	// change this line
+  		vec3 dir=normalize(lights[i].position-position);
+		Ray temp; 
+		HitInfo hTemp;
+		temp.dir=dir;
+		temp.pos=position;
+		float distance=length(dir);
+		if(!IntersectRay(hTemp,temp))
+		{
+            float lamb=max(dot(dir,normal),0.0);
+            vec3 halfDir=normalize(dir+view);
+            float spec=max(dot(halfDir,normal),0.0); 
+			color+=lights[i].intensity*(lamb*mtl.k_d+pow(spec,mtl.n)*mtl.k_s);	// change this line
+		}
 	}
 	return color;
 }
@@ -55,9 +67,25 @@ bool IntersectRay( inout HitInfo hit, Ray ray )
 {
 	hit.t = 1e30;
 	bool foundHit = false;
+	float bias=0.00001;
 	for ( int i=0; i<NUM_SPHERES; ++i ) {
 		// TO-DO: Test for ray-sphere intersection
 		// TO-DO: If intersection is found, update the given HitInfo
+		vec3 pc=ray.pos-spheres[i].center ;
+		float a=dot(ray.dir,ray.dir);
+		float b=dot((2.0*pc),ray.dir);
+		float c=dot(pc,pc)-spheres[i].radius*spheres[i].radius;
+		float delta=b*b-4.0*a*c;
+		float t=(-b-sqrt(delta))/(2.0*a);
+
+		if(t<hit.t && t>bias && delta>=0.0)
+		{
+            hit.position=ray.pos+(t*ray.dir);
+            hit.normal=normalize(hit.position-spheres[i].center);
+            hit.t=t;
+            hit.mtl=spheres[i].mtl;
+            foundHit=true;
+        }
 	}
 	return foundHit;
 }
@@ -81,13 +109,21 @@ vec4 RayTracer( Ray ray )
 			HitInfo h;	// reflection hit info
 			
 			// TO-DO: Initialize the reflection ray
+		    r.dir=ray.dir-2.0*dot(ray.dir,hit.normal)*hit.normal;
+			r.pos=hit.position;
 			
 			if ( IntersectRay( h, r ) ) {
 				// TO-DO: Hit found, so shade the hit point
 				// TO-DO: Update the loop variables for tracing the next reflection ray
+				
+				clr+=k_s*Shade(h.mtl,h.position,h.normal,normalize(-r.dir));
+				ray=r;
+				hit=h;
+				k_s=k_s*h.mtl.k_s;
 			} else {
 				// The refleciton ray did not intersect with anything,
 				// so we are using the environment color
+				ray.pos=h.position;
 				clr += k_s * textureCube( envMap, r.dir.xzy ).rgb;
 				break;	// no more reflections
 			}
