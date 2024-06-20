@@ -1,0 +1,25 @@
+﻿  lodepng.cpp
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\lodepng.cpp(705,35): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\lodepng.cpp(729,37): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\lodepng.cpp(746,38): warning C4267: '=': conversion from 'size_t' to 'unsigned short', possible loss of data
+  main.cpp
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(19,20): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(72,18): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(73,19): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(80,39): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(142,31): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(143,36): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(146,31): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(147,36): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(151,31): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(152,23): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(191,36): warning C4244: 'argument': conversion from 'GLfloat' to 'int', possible loss of data
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(191,21): warning C4244: 'argument': conversion from 'GLfloat' to 'int', possible loss of data
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(352,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(367,34): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(383,34): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(317): warning C4172: returning address of local variable or temporary: vbo
+C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Project6\main.cpp(285): warning C4172: returning address of local variable or temporary: vbo
+  Project6.vcxproj -> C:\Users\agray\Documents\alex stuff\academic stuff\CS5610\Projects\CS5610_InteractiveComputerGraphics-main\InteractiveComputerGraphics\Debug\Project6.exe
+          1 file(s) copied.
