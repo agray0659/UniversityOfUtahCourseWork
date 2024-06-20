@@ -1,0 +1,15 @@
+release/frame.o
+release/json_parser.o
+release/main.o
+release/main_window.o
+release/pixel.o
+release/pixel_editor.o
+release/preview_displayer.o
+release/sprite.o
+release/sprite_editor_model.o
+release/spritepreview.o
+release/moc_main_window.o
+release/moc_pixel_editor.o
+release/moc_preview_displayer.o
+release/moc_sprite_editor_model.o
+release/moc_spritepreview.o

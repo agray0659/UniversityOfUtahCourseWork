@@ -1,0 +1,15 @@
+debug/frame.o
+debug/json_parser.o
+debug/main.o
+debug/main_window.o
+debug/pixel.o
+debug/pixel_editor.o
+debug/preview_displayer.o
+debug/sprite.o
+debug/sprite_editor_model.o
+debug/spritepreview.o
+debug/moc_main_window.o
+debug/moc_pixel_editor.o
+debug/moc_preview_displayer.o
+debug/moc_sprite_editor_model.o
+debug/moc_spritepreview.o
